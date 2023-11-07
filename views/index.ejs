@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Tema de Canción</title>
+    <!-- Enlace al archivo CSS personalizado -->
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="nombre-pagina">IATunes</h1>
+            <p class="descripcion-pagina">Sitio web donde podrás crear canciones emocionantes de forma rápida y fácil.</p>
+        </header>
+        <!-- Resto del contenido de tu página -->
+    </div>
+    <div class="container">
+        <h1 class="mt-4">Solicitud de Tema de Canción</h1>
+        <div class="form-letra-container">
+            <form action="/consultar" method="post" class="form-solicitud">
+                <div class="form-group">
+                    <label for="tema">Tema de la canción:</label>
+                    <input type="text" class="form-control" id="tema" name="prompt" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Generar Letra de Canción</button>           
+
+            </form>
+                        
+            <!-- Espacio para mostrar la letra generada al costado del formulario -->
+            <% if (res) { %>
+                <div class="letra-generada">
+                    <h2>Letra Generada:</h2>
+                    <p><%= res %></p>
+                </div>
+            <% } %>
+           
+        </div>
+        <div class="formulario-generar-voz">
+            <!-- Formulario para generar la voz debajo del formulario para la letra -->
+            <form action="/generar-voz" method="get" enctype="multipart/form-data" class="mt-3">
+                <div class="form-group">
+                    <label for="idioma">Idioma:</label>
+                    <select class="form-control" id="idioma" name="idioma">
+                        <option value="es">Español</option>
+                        <option value="en">Inglés</option>
+                        <!-- Agrega más opciones de idioma según tus necesidades -->
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Generar Voz</button>
+            </form>
+        </div>
+        <h1 class="h1Subs">Mixer de Pistas de Voz y Música</h1>
+        <form action="/mezclar" method="post" enctype="multipart/form-data">
+        <!--<label for="voz">Cargar pista de voz:</label>-->
+        <input type="file" name="voz" accept=".mp3, .wav">
+        
+        <!--<label for="ritmo">Cargar pista de música (ritmo):</label>-->
+        <input type="file" name="ritmo" accept=".mp3, .wav">
+        
+        <button type="submit">Mezclar Pistas</button>
+    </form>
+    </div>
+    <!-- Agrega la referencia a los scripts (jQuery y Popper.js) si es necesario -->
+</body>
+</html>

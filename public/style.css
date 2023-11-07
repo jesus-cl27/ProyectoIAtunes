@@ -1,0 +1,135 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para el encabezado */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #333; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto en el encabezado */
+}
+
+/* Estilos para el nombre de la página */
+.nombre-pagina {
+    font-size: 36px; /* Tamaño de fuente del nombre de la página */
+    margin: 10px 0; /* Márgenes superior e inferior */
+}
+
+/* Estilos para la descripción */
+.descripcion-pagina {
+    font-size: 18px; /* Tamaño de fuente de la descripción */
+    margin: 10px 0; /* Márgenes superior e inferior */
+}
+
+/* Otros estilos de tu página web */
+/* ... */
+
+
+/* Estilos para el contenedor del formulario y la letra */
+.form-letra-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilos para el formulario de solicitud de tema */
+.form-solicitud {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-right: 20px; /* Espacio entre el formulario y la letra */
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el espacio de la letra generada */
+.letra-generada {
+    flex: 1;
+    padding: 24px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.cargando {
+    display: none; /* Inicialmente oculto */
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+/* Estilos para la sección del Mixer de Pistas de Voz y Música */
+.h1Subs {
+    font-size: 24px; /* Tamaño de fuente del título */
+    margin-top: 30px; /* Márgenes superiores */
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para el formulario de carga de pistas de voz y música */
+form[action="/mezclar"] {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    margin-top: 20px; /* Espacio entre el formulario anterior y este */
+}
+
+form[action="/mezclar"] label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+form[action="/mezclar"] input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form[action="/mezclar"] button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form[action="/mezclar"] button:hover {
+    background-color: #0056B3;
+}
